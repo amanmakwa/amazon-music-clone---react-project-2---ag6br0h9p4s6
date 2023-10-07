@@ -39,3 +39,5 @@ next-env.d.ts
 
 #hint
 .hintrc
+
+stripe.exe
