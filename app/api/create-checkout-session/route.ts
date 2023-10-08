@@ -36,7 +36,6 @@ export async function POST(
       mode: 'subscription',
       allow_promotion_codes: true,
       subscription_data: {
-        // trial_from_plan: true,
         metadata
       },
       success_url: `${getURL()}/account`,
@@ -46,6 +45,6 @@ export async function POST(
     return NextResponse.json({ sessionId: session.id });
   } catch (err: any) {
     console.log(err);
-    return new NextResponse('Internal Error', { status: 200 });
+    return new NextResponse('Internal Error', { status: 500 });
   }
 }
